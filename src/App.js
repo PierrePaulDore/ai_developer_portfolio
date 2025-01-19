@@ -37,7 +37,7 @@ const HomePage = () => {
 
       {/* Powers Section */}
       <section className="max-w-6xl mx-auto py-12 px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">The Four Powers</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center">The Five Powers</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Column 1 */}
           <div className="flex flex-col gap-8">
@@ -54,6 +54,13 @@ const HomePage = () => {
               <h3 className="text-xl font-bold mb-4">Power to Automate</h3>
               <p className="text-gray-600">
                 Leveraging AI agents and workflow automation to increase efficiency and productivity.
+              </p>
+            </div>
+            {/* Power to analyze */}
+            <div className="bg-white p-6 rounded-lg shadow-md h-full">
+              <h3 className="text-xl font-bold mb-4">Power to analyze</h3>
+              <p className="text-gray-600">
+              Tracks user interactions and behavior on website, providing enhanced data collection and improved data modeling. Enables easy tag management, flexible tracking, and enhanced security, allowing  to collect and analyze data more effectively.
               </p>
             </div>
           </div>
