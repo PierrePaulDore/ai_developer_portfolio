@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Mail, Github, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
@@ -10,7 +10,6 @@ const HomePage = () => {
         <nav className="max-w-6xl mx-auto flex justify-between items-center">
           <h1 className="text-xl font-bold">Pierre Paul Doré</h1>
           <div className="space-x-6">
-            <Link to="/" className="text-blue-600">Home</Link>
             <Link to="/about" className="hover:text-blue-600">About</Link>
             <Link to="/projects" className="hover:text-blue-600">Projects</Link>
             <Link to="/skills" className="hover:text-blue-600">Skills</Link>
@@ -19,7 +18,6 @@ const HomePage = () => {
         </nav>
       </header>
 
-      {/* Rest of your HomePage content remains the same... */}
       {/* Hero Section */}
       <section className="text-center py-12 px-4">
         <h2 className="text-4xl font-bold mb-4">AI Developer & Tech Enthusiast</h2>
@@ -40,52 +38,52 @@ const HomePage = () => {
 
       {/* Powers Section */}
       <section className="max-w-6xl mx-auto py-12 px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">The Five Powers</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center">The Four Powers</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Column 1 */}
           <div className="flex flex-col gap-8">
             {/* Power to Build */}
-            <div className="bg-white p-6 rounded-lg shadow-md h-full">
-              <h3 className="text-xl font-bold mb-4">Power to Build</h3>
-              <p className="text-gray-600">
-                Creating software and tools that solve real-world problems using AI-assisted development.
-              </p>
-            </div>
+            <Link to="/powers/build" className="block">
+              <div className="bg-white p-6 rounded-lg shadow-md h-full hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-bold mb-4">Power to Build</h3>
+                <p className="text-gray-600">
+                  Creating software and tools that solve real-world problems using AI-assisted development.
+                </p>
+              </div>
+            </Link>
 
             {/* Power to Automate */}
-            <div className="bg-white p-6 rounded-lg shadow-md h-full">
-              <h3 className="text-xl font-bold mb-4">Power to Automate</h3>
-              <p className="text-gray-600">
-                Leveraging AI agents and workflow automation to increase efficiency and productivity.
-              </p>
-            </div>
-
-            {/* Power to Create */}
-            <div className="bg-white p-6 rounded-lg shadow-md h-full">
-              <h3 className="text-xl font-bold mb-4">Power to Create</h3>
-              <p className="text-gray-600">
-                Generating professional-grade content and designs using AI-powered tools.
-              </p>
-            </div>
+            <Link to="/powers/automate" className="block">
+              <div className="bg-white p-6 rounded-lg shadow-md h-full hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-bold mb-4">Power to Automate</h3>
+                <p className="text-gray-600">
+                  Leveraging AI agents and workflow automation to increase efficiency and productivity.
+                </p>
+              </div>
+            </Link>
           </div>
 
           {/* Column 2 */}
           <div className="flex flex-col gap-8">
-            {/* Power to Connect */}
-            <div className="bg-white p-6 rounded-lg shadow-md h-full">
-              <h3 className="text-xl font-bold mb-4">Power to Connect</h3>
-              <p className="text-gray-600">
-                Building influence and audience through AI-enhanced communication.
-              </p>
-            </div>
+            {/* Power to Create */}
+            <Link to="/powers/create" className="block">
+              <div className="bg-white p-6 rounded-lg shadow-md h-full hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-bold mb-4">Power to Create</h3>
+                <p className="text-gray-600">
+                  Generating professional-grade content and designs using AI-powered tools.
+                </p>
+              </div>
+            </Link>
 
-            {/* Power to Analyze */}
-            <div className="bg-white p-6 rounded-lg shadow-md h-full">
-              <h3 className="text-xl font-bold mb-4">Power to Analyze</h3>
-              <p className="text-gray-600">
-                Tracks user interactions and behavior on website, providing enhanced data collection and improved data modeling. Enables easy tag management, flexible tracking, and enhanced security, allowing to collect and analyze data more effectively.
-              </p>
-            </div>
+            {/* Power to Connect */}
+            <Link to="/powers/connect" className="block">
+              <div className="bg-white p-6 rounded-lg shadow-md h-full hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-bold mb-4">Power to Connect</h3>
+                <p className="text-gray-600">
+                  Building influence and audience through AI-enhanced communication.
+                </p>
+              </div>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,27 +1,22 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-// Import all page components - corrected path for HomePage
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
-import AboutPage from './components/AboutPage';
-import ProjectsPage from './components/ProjectsPage';
-import SkillsPage from './components/SkillsPage';
-import ContactPage from './components/ContactPage';
+import PowerToBuild from './components/powers/build';
+import PowerToAutomate from './components/powers/automate';
+import PowerToCreate from './components/powers/create';
+import PowerToConnect from './components/powers/connect';
 
-const App = () => {
+function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/skills" element={<SkillsPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
-      </Router>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/powers/build" element={<PowerToBuild />} />
+        <Route path="/powers/automate" element={<PowerToAutomate />} />
+        <Route path="/powers/create" element={<PowerToCreate />} />
+        <Route path="/powers/connect" element={<PowerToConnect />} />
+      </Routes>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;
